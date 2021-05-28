@@ -108,6 +108,7 @@ const Player = {
     },
 
     showFichaPlayer(fichaName){
+        Player.clearFicha()
         const aside = document.querySelector('aside')
         const main = document.querySelector('main')
     
@@ -128,8 +129,6 @@ const Player = {
     },
 
 }
-
-
 
 const quickDices = {
     quickDice(size) {

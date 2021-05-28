@@ -111,6 +111,27 @@ input#hp:focus{
     outline: none;
 }
 
+.ficha {
+    background-color: var(--black);
+    margin: auto;
+}
+
+.ficha p {
+    max-width: 200px;
+    
+    text-align: center;
+    
+    font-size: 24px;
+    font-weight: 300;
+
+    padding: 20px;
+    margin: 25% auto;
+
+    border-radius: 10px;
+
+    background-color: white;
+}
+
 .addPlayer{
     padding: 5px;
 }
