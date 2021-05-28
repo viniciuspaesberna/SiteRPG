@@ -1,0 +1,339 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+:root{
+    --black: #100c0c;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins, sans-serif;
+    list-style: circle;
+    cursor: context-menu;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/*Links e Buttons ======================*/
+a{
+    text-decoration: none;
+    color: rgba(116, 115, 115, 0.692);
+    cursor: pointer;
+}
+
+button{
+    font-weight: bold;
+    
+    padding: 10px;
+
+    border: none;
+    border-radius: 5px;
+
+    cursor: pointer;
+}
+
+
+/*Header ======================*/
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 0 auto;
+    padding: 20px;
+
+    border-bottom: white solid 2px;
+
+    background-color: var(--black);
+    color: white;
+}
+
+header h1{
+    margin: auto;
+}
+
+header #playersContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#players{
+    display: flex;
+    justify-content: space-around;
+
+    margin: auto;
+    padding: 10px;
+}
+
+.player{
+    width: 200px;
+    display: flex;
+    align-items: center;
+    margin: 0 20px;
+}
+
+.playerInfo h3{
+    font-size: 18px;
+}
+
+.status {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    margin-top: 10px;
+}
+
+input#hp{
+    width: 60px;
+
+    border: none;
+    
+    color: white;
+    background-color: var(--black);
+
+    font-size: 16px;
+}
+
+input#hp:focus{
+    outline: none;
+}
+
+.addPlayer{
+    padding: 5px;
+}
+
+
+header #login{
+    margin: auto;
+    padding: 20px;
+}
+
+#login ul li {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 2.5rem;
+}
+
+/*Modal ======================*/
+.modal-overlay{
+    width: 100%;
+    height: 100%;
+
+    position: fixed;
+    top: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0;
+    visibility: hidden;    
+
+    background-color: rgba(0, 0, 0, 0.8);
+
+    z-index: 997;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+    z-index: 998;
+}
+
+.modal {
+    width: 600px;
+    
+    padding: 20px;
+
+    border-radius: 0 10px 10px 10px;
+    box-shadow: 3px 3px 10px rgba(255, 255, 255, 0.37);
+
+    background-color: white;
+    z-index: 999;
+}
+
+/*Form ======================*/
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    padding: 5px;
+
+    border-radius: 3px;
+    border-style: solid;
+
+    cursor: text;
+}
+
+.input-group {
+    
+    margin-top: 20px;
+}
+
+.input-group.actions{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.input-group.actions a{
+    color: black;
+    margin-left: 50px;
+}
+
+.input-group.actions button {
+    width: 100px;
+    background-color: rgb(61, 212, 61);
+    margin-right: 50px;
+
+}
+
+/*Player-form ======================*/
+.player-form h2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.player-form input#name {
+    width: 240px;
+}
+
+.player-form input#hp {
+    width: 149px;
+}
+
+.player-form input#ficha{
+    border: none;
+}
+
+/*Main ======================*/
+main{
+    display: flex;
+}
+
+.ficha{
+    width: 65%;
+    height: 100vh;
+}
+/*Aside ======================*/
+aside {
+    width: 45%;
+    
+    padding: 10px;
+
+    background-color: var(--black);
+    color: white;
+}
+aside .titleSection h2{
+    max-width: 500px;
+
+    display: flex;
+    justify-content: center;
+
+    border-bottom: 2px solid white;
+
+    margin: auto;
+    margin-bottom: 20px;
+    padding: 15px;
+}
+
+aside article.Section{
+    width: 100%;
+    padding: 10px;
+    border-bottom: 1px solid white;
+}
+
+/*DiceSection ======================*/
+.customDice{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 20px;
+    font-weight: 300;
+
+    margin: auto;
+}
+
+.customDice input{
+    max-width: 50px;
+
+    margin: 5px;
+    margin-bottom: 20px;
+    padding: 5px;
+}
+
+#result{
+    height: 85px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 2rem 1rem;
+    padding: 10px;
+
+    border-radius: 10px;
+
+    background-color: white;
+    color: black;
+
+    overflow-x: auto;
+}
+
+#result p {
+    background-color: black;
+    color: white;
+
+    margin: 10px;
+    padding: 10px;
+
+    border-radius: 5px;
+}
+
+.dices{
+    display: flex;
+    justify-content: center;
+}
+
+.dices button{
+    margin: 0 5px;
+}
+
+/*TimerSection ======================*/
+
+
+/*Footer ======================*/
+footer {
+    height: 100px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 0 auto;
+    padding: 20px;
+
+    border-top: 2px solid ivory;
+
+    background-color: black;
+    color: white;
+}
+
